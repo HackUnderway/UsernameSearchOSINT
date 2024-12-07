@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSINT Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #444;
+        }
+        ul {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 0;
+            list-style-type: none;
+        }
+        li {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .found {
+            color: #28a745;
+        }
+        .not-found {
+            color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <h1>Results for {{ username }}</h1>
+    <ul>
+        {% for platform, data in results.items() %}
+            <li>
+                <strong>{{ platform }}:</strong>
+                {% if data.exists %}
+                    {% if platform == "GitHub" %}
+                        <p><strong>Name:</strong> {{ data.name }}</p>
+                        <p><strong>Bio:</strong> {{ data.bio }}</p>
+                        <p><strong>Public Repos:</strong> {{ data.public_repos }}</p>
+                        <p><strong>Followers:</strong> {{ data.followers }}</p>
+                        <p><strong>Following:</strong> {{ data.following }}</p>
+                        <p><strong>Profile URL:</strong> <a href="{{ data.profile_url }}" target="_blank">{{ data.profile_url }}</a></p>
+                    {% else %}
+                        <span class="found"><a href="{{ data.url }}" target="_blank">Profile Found</a></span>
+                    {% endif %}
+                {% else %}
+                    <span class="not-found">Profile Not Found</span>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+    <p style="text-align: center;"><a href="/">Search again</a></p>
+</body>
+</html>
