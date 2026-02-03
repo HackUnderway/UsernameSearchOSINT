@@ -31,7 +31,7 @@ git clone https://github.com/HackUnderway/UsernameSearchOSINT.git
 cd UsernameSearchOSINT
 ```
 ```
-python3 UsernameSearchOSINT.py
+python3 username_search_osint.py
 ```
 # REQUIREMENTS
 ```
@@ -67,6 +67,6 @@ If you want to discover other tools of the same kind there are:
 - [Digital-Footprint-OSINT-Tool](https://github.com/Hamed233/Digital-Footprint-OSINT-Tool)
 - [Sherlock](https://github.com/sherlock-project/sherlock)
 
-from <img src="https://i.imgur.com/ngJCbSI.png" title="Perú"> made in <img src="https://i.imgur.com/NNfy2o6.png" title="Python"> with <img src="http://cdn0.bodas.com.mx/img/smileys/smiley_heart.png" title="Love"> by: <font color="red">Victor Bancayan</font>, if you want Donate <a href="https://www.buymeacoffee.com/HackUnderway"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=HackUnderway&button_colour=40DCA5&font_colour=ffffff&font_family=Comic&outline_colour=000000&coffee_colour=FFDD00" /></a>
+from <img src="https://i.imgur.com/ngJCbSI.png" title="Perú"> made in <img src="https://i.imgur.com/NNfy2o6.png" title="Python"> with <img src="https://i.imgur.com/S86RzPA.png" title="Love"> by: <font color="red">Victor Bancayan</font>
 
-© 2024
+© 2026
